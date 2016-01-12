@@ -1,0 +1,235 @@
+@charset "utf-8";
+@import url("common.css");
+body{
+	background:url(../images/user_bg.jpg) no-repeat center top;
+	}
+#banner{
+	width:100%;
+	min-width:8rem;
+	height:2.56rem;
+	border-top:.03rem solid #dcc599;
+	}
+#banner img{
+	width:100%;
+	height:100%;
+	}
+/*主体*/
+#my_article{
+	width:65%;
+	min-width:8rem;
+	margin:0 auto;
+	overflow:hidden;
+	background:rgba(255,255,255,0.8);
+	padding:2% 2% 3%;
+	/*border:1px solid red;*/
+	}
+#my_article>h3{
+	font-size:.18rem;
+	font-weight:normal;
+	background:url(../images/user_info.png) no-repeat left top;
+	padding:0 0 .05rem .3rem;
+	border-bottom:.02rem solid #f1f1f1;
+	}	
+#my_article>ul li{
+	width:50%;
+	float:left;
+	padding:3% 0 4%;
+	/*border-bottom:1px solid #f1f1f1;*/
+	}
+#my_article>ul li:last-child,#my_article>ul li:nth-last-child(2){
+	border-bottom:0px solid;
+	}
+/*左-图*/	
+.bookface{
+	width:40%;
+	float:left;
+	padding:1.2%;
+	box-shadow:.01rem .01rem .1rem #666;
+	}
+.bookface img{
+	width:100%;
+	height:100%;
+	vertical-align:middle;
+	}	
+/*右-内容*/
+.bookcontent{
+	width:40%;
+	margin-left:5%;
+	float:left;
+	/*border:1px solid blue;*/
+	}	
+.bookcontent h3{
+	font-size:.18rem;
+	font-weight:normal;
+	margin-bottom:20%;
+	/*border:1px solid green;*/
+	}	
+.bookcontent p{
+	font-size:.14rem;
+	color:#787878;
+	line-height:180%;
+	margin-bottom:20%;
+	}	
+.bookcontent a{
+	width:50%;
+	font-size:.14rem;
+	height:.3rem;
+	line-height:.28rem;
+	border-radius:.15rem;
+	color:#FFF;
+	text-align:center;
+	display:inline-block;
+	background:#07a4e6;
+	}		
+/*主体结束*/
+@media (min-width:1920px){
+
+	}
+@media (min-width:1680px) and (max-width: 1919px) {
+
+}
+@media (min-width:1600px) and (max-width: 1679px) {
+.bookcontent h3 {
+    margin-bottom: 10%;
+}
+.bookcontent p {
+    margin-bottom: 18%;
+}
+#my_article {
+    width: 66%;
+}
+}
+@media (min-width:1440px) and (max-width: 1599px) {
+.bookcontent h3 {
+    margin-bottom: 10%;
+}
+.bookcontent p {
+    margin-bottom: 6%;
+}
+#my_article {
+    width: 74%;
+}
+}
+@media (min-width:1360px) and (max-width:1439px) {
+.bookcontent h3 {
+    margin-bottom: 10%;
+}
+.bookcontent p {
+    margin-bottom: 10%;
+}
+#my_article {
+    width: 76%;
+}
+.bookcontent h3 {
+    font-size: 0.16rem;
+}
+}
+@media (min-width:1280px) and (max-width:1359px) {
+.bookcontent h3 {
+    margin-bottom: 8%;
+}
+.bookcontent p {
+    margin-bottom: 10%;
+}
+#my_article {
+    width: 76%;
+}
+.bookcontent h3 {
+    font-size: 0.16rem;
+}
+}
+@media (min-width:1152px) and (max-width:1279px) {
+.bookcontent h3 {
+    margin-bottom: 7%;
+}
+.bookcontent p {
+    margin-bottom: 8%;
+}
+#my_article {
+    width: 79%;
+}
+.bookcontent h3 {
+    font-size: 0.16rem;
+}
+.bookcontent p {
+    line-height: 165%;
+}
+}
+@media (min-width:1024px) and (max-width:1151px) {
+.bookcontent h3 {
+    margin-bottom: 7%;
+}
+.bookcontent p {
+    margin-bottom: 8%;
+}
+#my_article {
+    width: 90%;
+}
+.bookcontent h3 {
+    font-size: 0.16rem;
+}
+.bookcontent p {
+    line-height: 165%;
+}
+}
+@media (min-width:980px) and (max-width:1023px) {
+.bookcontent h3 {
+    margin-bottom: 7%;
+}
+.bookcontent p {
+    margin-bottom: 8%;
+}
+#my_article {
+    width: 94%;
+}
+.bookcontent h3 {
+    font-size: 0.16rem;
+}
+.bookcontent p {
+    line-height: 165%;
+}
+}
+@media (min-width:801px) and (max-width:979px) {
+.bookcontent h3 {
+    margin-bottom: 7%;
+}
+.bookcontent p {
+    margin-bottom: 8%;
+	font-size:.12rem;
+}
+#my_article {
+    width: 98%;
+}
+.bookcontent h3 {
+    font-size: 0.14rem;
+}
+.bookcontent p {
+    line-height: 165%;
+}
+.bookcontent {
+    width: 41%;
+    margin-left: 4%;
+}
+}
+@media (max-width:800px){
+.bookcontent h3 {
+    margin-bottom: 7%;
+}
+.bookcontent p {
+    margin-bottom: 8%;
+	font-size:.12rem;
+}
+#my_article {
+    width: 98%;
+}
+.bookcontent h3 {
+    font-size: 0.14rem;
+}
+.bookcontent p {
+    line-height: 165%;
+}
+.bookcontent {
+    width: 41%;
+    margin-left: 4%;
+}
+}

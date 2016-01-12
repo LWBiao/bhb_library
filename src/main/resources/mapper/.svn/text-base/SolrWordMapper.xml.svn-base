@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bhb.mall.mapper.SolrWordMapper" >
+  <resultMap id="BaseResultMap" type="SolrWord" >
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="words" jdbcType="VARCHAR" property="words" />
+    <result column="frequency" jdbcType="BIGINT" property="frequency" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="lastUpdateTime" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, words, frequency, createTime, lastUpdateTime
+  </sql>
+  <select id="selectAll" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from solr_word
+  </select>
+</mapper>

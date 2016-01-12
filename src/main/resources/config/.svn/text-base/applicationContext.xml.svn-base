@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--  jdbc.properties文件路径   --> 
+    <bean 
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
+        <property name="locations" 
+        value="classpath:properties/jdbc.properties" /> 
+    </bean> 
+    
+    <context:component-scan base-package="com.bhb.mall.service.*,com.bhb.mall.dao.*"/>
+    
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	    <property name="basePackage" value="com.bhb.mall.mapper,com.bhb.mall.model" />
+	</bean>
+
+    <!-- 数据源的配置 --> 
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" 
+        destroy-method="close"> 
+        <property name="driverClassName" value="${driver}" /> 
+        <property name="url" value="${url}" /> 
+        <property name="username" value="${user}" /> 
+        <property name="password" value="${password}" /> 
+        <!-- data source configuration --> 
+        <property name="initialSize" value="60" /><!-- initial connections --> 
+        <property name="maxActive" value="100" /><!-- MAX connections --> 
+        <property name="maxIdle" value="50" /><!-- MAX idle connections --> 
+        <property name="minIdle" value="10" /><!-- MIN idle connections --> 
+        <!-- 处理mysql 8小时自动断开连接的问题 --> 
+        <property name="testWhileIdle" value="true" /> 
+        <property name="testOnBorrow" value="false" /> 
+        <property name="testOnReturn" value="false" /> 
+        <property name="validationQuery" value="select 1" /> 
+        <property name="timeBetweenEvictionRunsMillis" value="20000" /> 
+        <property name="numTestsPerEvictionRun" value="100" /> 
+    </bean> 
+    <!--====事务相关控制==--> 
+   <!--  <bean id="transactionManager" 
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+        <property name="dataSource" ref="dataSource" /> 
+    </bean>  -->
+  <!--   <tx:advice id="userTxAdvice" transaction-manager="transactionManager"> 
+        <tx:attributes> 
+            <tx:method name="*" propagation="REQUIRED" read-only="false" 
+                rollback-for="java.lang.Exception"/> 
+        </tx:attributes> 
+    </tx:advice> 
+    <aop:config> 
+        <aop:pointcut id="pc" 
+            expression="execution(* com.bhb.mall.service.*.*(..))" /> 
+             把事务控制在Business层 
+        <aop:advisor pointcut-ref="pc" advice-ref="userTxAdvice" /> 
+    </aop:config>  -->
+    <!-- MyBatis sqlSessionFactory 配置 mybatis--> 
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
+        <property name="configLocation" 
+        value="classpath:config/mybatis-config.xml" /> 
+        <property name="dataSource" ref="dataSource" /> 
+        <property name="mapperLocations" value="classpath:mapper/*.xml" />
+        <property name="typeAliasesPackage" value="com.bhb.mall/model" />
+       <!--  <property name="plugins">
+		    <array>
+		      <bean class="com.github.pagehelper.PageHelper">
+		        <property name="properties">
+		          <value>
+		            dialect=hsqldb
+		          </value>
+		        </property>
+		      </bean>
+		    </array>
+		  </property> -->
+    </bean> 
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"> 
+        <constructor-arg index="0" ref="sqlSessionFactory" /> 
+    </bean> 
+    <bean id="mybatisHelper" class="com.bhb.mall.utils.MybatisHelper"> 
+    </bean>
+    <!-- business AND implementation beans 包含ImplAndBusinessBeans.xml文件 --> 
+    <!-- <import resource="classpath:config/springframework-beans.xml" /> --> 
+</beans>

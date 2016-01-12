@@ -1,0 +1,131 @@
+10
+
+dir
+40
+svn://192.168.1.101/com/bhb/java/bhb_library/src/main/java/com/bhb/mall
+svn://192.168.1.101
+
+
+
+2015-12-18T09:45:21.266459Z
+40
+lwb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+cf6fce46-0297-47d8-9892-fae43c17ecac
+
+
+
+
+
+
+0
+
+controller
+dir
+
+dao
+dir
+
+exception
+dir
+
+indexBean
+dir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
+
+mapper
+dir
+
+model
+dir
+
+service
+dir
+
+solrBean
+dir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
+
+template
+dir
+
+utils
+dir
+
+vo
+dir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
+

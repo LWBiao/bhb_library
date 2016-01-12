@@ -1,0 +1,254 @@
+@charset "utf-8";
+@import url("common.css");
+/*注册页背景图*/
+body{
+	background:url(../images/login_bg.jpg) no-repeat center top;
+	}
+#header {
+	border-bottom:3px solid #dcc599;
+	min-width:8rem;
+	}
+/*主体*/
+#register_n_login{
+	width:70%;
+	min-width:8rem;
+	margin:0 auto;
+	overflow:hidden;
+	color:#9e9e9e;
+	font-size:.16rem;
+	margin-top:.7rem;
+	padding-bottom:4%;
+	background:#fefefe;
+	border-top:1px solid #f7f7f7;
+	}
+#register_n_login>ul{
+	width:45%;
+	text-align:center;
+	overflow:hidden;
+	margin:0 auto;
+	}
+#register_n_login>ul>li{
+	width:50%;
+	float:left;
+	padding:.24rem 0;
+	cursor:pointer;
+	}
+#register_n_login ul li.l_r_active{
+	color:#008ee0;
+	background:url(../images/point_tag.png) no-repeat center bottom;
+	border-bottom:2px solid #008ee0;
+	}
+/*注册*/
+.register_page,.login_page{
+	width:100%;
+	border-top:2px solid #f7f7f7;
+	}
+.reg_left{
+	width:30%;
+	margin-top:5%;
+	padding:1% 0 3%;
+	float:left;
+	border-right:1px solid #ececec;
+	}
+.reg_left h3{
+	font-size:.16rem;
+	font-weight:normal;
+	padding-left:14%;
+	color:#484848;
+	}
+.reg_left ul{
+	width:86%;
+	overflow:hidden;
+	margin:2% 0 14% 14%;
+	}
+.reg_left ul li{
+	float:left;
+	height:.34rem;
+	width:.34rem;
+	margin-right:4%;
+	background-image:url(../images/more_log.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	}
+.reg_left ul li.rli02{
+	background-position: -48px center;
+	}
+.reg_left ul li.rli03{
+	background-position: -98px center;
+	}
+.reg_left ul li.rli04{
+	background-position: -145px center;
+	}
+.reg_left ul li.rli05{
+	background-position: -195px center;
+	}
+.reg_left ul li.rli06{
+	background-position: right center;
+	}
+.reg_left em{
+	display:block;
+	width:30%;
+	margin:4% 0 0 18%;
+	}
+.reg_left em img{
+	width:100%;
+	height:100%;
+	}
+.reg_right{
+	width:70%;
+	float:left;
+	margin-top:5%;
+	}
+.reg_right>form>div{
+	width:100%;
+	margin-top:2%;
+	padding-left:5%;
+	color:#404040;
+	}
+.reg_right>form>div input{
+	width:40%;
+	height:.36rem;
+	font-size:.16rem;
+	margin-left:2%;
+	padding-left:1%;
+	border:1px solid #dedede;
+	}	
+.reg_right>form>div input.randomword{
+	width:20%;
+	}
+.reg_right>form>div input[type="radio"]{
+	width:15px;
+	height:15px;
+	border:0px solid;
+	vertical-align:-3px;
+	}
+.reg_right>form>div>em{
+	width:10%;
+	height:.36rem;
+	margin-left:2%;
+	vertical-align:middle;
+	display:inline-block;
+	}
+.reg_right>form>div>em >img{
+	width:100%;
+	height:100%;
+	}
+.reg_right>form>div>i{
+	color:#09F;
+	font-size:.14rem;
+	font-style:normal;
+	margin-left:1%;
+	vertical-align:middle;
+	cursor:pointer;
+	}
+.reg_right>form>div button{
+	width:28%;
+	height:40px;
+	color:#fff;
+	font-size:.18rem;
+	background:#09F;
+	border:0 solid;
+	border-radius:20px;
+	margin-left:10%;
+	outline:none;
+	cursor:pointer;
+	}
+.reg_right>form>div.word{
+	padding:1% 0 1% 11%
+	}
+.reg_right>form>div.word label{
+	font-size:.12rem;
+	}
+/*登录*/
+.log_left .welcomeback{
+	width:100%;
+	padding:0 0 2% 13%;
+	}
+.log_left .welcomeback>img{
+	width:70%;
+	height:.55rem;
+	}
+.log_right form{
+	padding-left:8%;
+	border:1px solid #fff;
+	}
+.log_right form >div.log_in{
+	padding-top:2%;
+	}
+.reg_right>form>.times input{
+	margin-left:5%;
+	border:1px solid red;
+	}
+.times a{
+	margin-left:8%;
+	}
+/*主体结束*/
+@media (min-width:1920px){
+
+	}
+@media (min-width:1680px) and (max-width: 1919px) {
+
+}
+@media (min-width:1600px) and (max-width: 1679px) {
+
+}
+@media (min-width:1440px) and (max-width: 1599px) {
+.log_left .welcomeback>img{
+	width:72%;
+	height:.48rem;
+	}
+.reg_left ul li{
+	margin-right:2%;
+	}
+}
+@media (min-width:1360px) and (max-width:1439px) {
+.log_left .welcomeback>img{
+	width:72%;
+	height:.48rem;
+	}
+.reg_left ul li{
+	margin-right:2%;
+	}
+}
+@media (min-width:1280px) and (max-width:1359px) {
+.log_left .welcomeback>img{
+	width:72%;
+	height:.48rem;
+	}
+.reg_left ul li{
+	margin-right:1%;
+	}
+}
+@media (min-width:1152px) and (max-width:1279px) {
+.log_left .welcomeback>img{
+	width:73%;
+	height:.46rem;
+	}
+.reg_left ul li{
+	margin-right:0%;
+	}
+}
+@media (min-width:1024px) and (max-width:1151px) {
+.log_left .welcomeback>img{
+	width:80%;
+	height:.44rem;
+	}
+}
+@media (min-width:980px) and (max-width:1023px) {
+.log_left .welcomeback>img{
+	width:80%;
+	height:.42rem;
+	}
+}
+@media (min-width:801px) and (max-width:979px) {
+.log_left .welcomeback>img{
+	width:85%;
+	height:.4rem;
+	}
+}
+@media (max-width:800px){
+.log_left .welcomeback>img{
+	width:85%;
+	height:.4rem;
+	}
+}

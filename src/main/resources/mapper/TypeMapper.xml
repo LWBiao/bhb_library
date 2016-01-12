@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bhb.mall.mapper.TypeMapper">
+	<resultMap id="BaseResultMap" type="Type">
+		<id column="id" jdbcType="INTEGER" property="id" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="pid" jdbcType="INTEGER" property="pid" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="lastUpdateTime" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, level, name, code, pid, remark, createTime, lastUpdateTime
+	</sql>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_type
+	</select>
+	<select id="selectIdsByBookId" resultType="Integer">
+		select
+		t_type.id
+		from t_type, t_book
+		where t_book.typeId = t_type.id and t_book.id = #{bookId,jdbcType=INTEGER}
+		union
+		select
+		id
+		from t_type t
+		where t.id = (select t_type.pid from t_type, t_book where t_book.typeId =
+		t_type.id and t_book.id = #{bookId,jdbcType=INTEGER})
+	</select>
+	<select id="selectByCondition" parameterType="com.bhb.mall.model.Type" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from t_type
+		where 1 = 1
+		<if test="condition.id != null" >
+        and id = #{condition.id,jdbcType=INTEGER}
+      	</if>
+		<if test="condition.level != null" >
+        and level = #{condition.level,jdbcType=INTEGER}
+      	</if>
+		<if test="condition.name != null" >
+        and name = #{condition.name,jdbcType=VARCHAR}
+      	</if>
+		<if test="condition.code != null" >
+        and code = #{condition.code,jdbcType=VARCHAR}
+      	</if>
+		<if test="condition.pid != null" >
+        and pid = #{condition.pid,jdbcType=INTEGER}
+      	</if>
+		<if test="condition.remark != null" >
+        and remark = #{condition.remark,jdbcType=VARCHAR}
+      	</if>
+	</select>
+	
+	<select id="selectByIds" resultMap="BaseResultMap">
+		select 
+		<include refid="Base_Column_List" />
+		from t_type
+		where 1=1 
+		<if test="ids != null" >
+        and id in 
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">  
+	    	#{item}   
+	    </foreach>
+      	</if>
+		
+	</select>
+	
+	<select id="selectById" resultMap="BaseResultMap">
+		select 
+		<include refid="Base_Column_List" />
+		from t_type
+		where id = #{id,jdbcType=INTEGER}   
+	</select>
+
+</mapper>

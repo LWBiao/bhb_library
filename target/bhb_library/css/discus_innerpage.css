@@ -1,0 +1,232 @@
+@charset "utf-8";
+.weibo_left .dis_innerpage_p1{
+	padding:.2rem 0;
+	}
+.dis_innerpage_p3 ul{
+	padding-bottom:.38rem;
+	overflow:hidden;
+	}
+.dis_innerpage_p3 ul li{
+	float:left;
+	margin:.12rem .12rem 0 .32rem;
+	padding-top:.16rem;
+	}
+.dis_innerpage_p3 ul li>a{
+	display:inline-block;
+	padding-top:.04rem;
+	position:relative;
+	}
+.dis_innerpage_p3 ul li>a img{
+	width:.79rem;
+	height:.79rem;
+	border-radius:.4rem;
+	overflow:hidden;
+	}
+.dis_innerpage_p3 ul li>a i{
+	display:inline-block;
+	font-size:.12rem;
+	color:#f00000;
+	width:.2rem;
+	height:.2rem;
+	line-height:.2rem;
+	border:.01rem solid #f31a1a;
+	background:#fff;
+	border-radius:.1rem;
+	text-align:center;
+	font-style:normal;
+	position:absolute;
+	top:0;
+	right:.04rem;
+	}
+.dis_innerpage_p3 ul li>a i.adm{
+	color:#0083f2;
+	border:.01rem solid #0083f2;
+	}
+.dis_innerpage_p3 ul li span{
+	display:block;
+	text-align:center;
+	}
+.dis_innerpage_p3 ul li span a{
+	font-size:.14rem;
+	color:#393939;
+	}
+/*右*/
+.wb_right_p1{
+	margin-bottom:.16rem;
+	}
+/*part1*/
+.dis_innerpage_rightp1{
+	padding:.28rem;
+	border: 1px solid #e6e6e6;
+	}
+.dis_innerpage_rightp1 .p1_img img{
+	display:inline-block;
+	width:1.25rem;
+	height:1.25rem;
+	border-radius:.63rem;
+	overflow:hidden;
+	}
+.p1_img{
+	text-align:center;
+	}
+.p1_img h3 a{
+	font-size:.2rem;
+	line-height:.58rem;
+	color:#393939;
+	font-weight:normal;
+	}
+.p1_btn1 a{
+	font-size:.12rem;
+	color:#444444;
+	border:1px solid blue;
+	display:inline-block;
+	padding:.04rem .2rem;
+	margin-right:.14rem;
+	border:.01rem solid #d9d9d9;
+	border-radius:.01rem;
+	}
+.p1_btn1 a:hover{
+	color:#0049f0;
+	}
+.p1_nums{
+	margin:.16rem 0;
+	}
+.p1_nums span,.p1_nums span a{
+	font-size:.14rem;
+	color:#b3b3b3;
+	}
+.p1_nums span{
+	margin-right:.66rem;
+	}
+.dis_innerpage_rightp1 p{
+	font-size:.14rem;
+	color:#393939;
+	line-height:.26rem;
+	}
+.dis_innerpage_rightp1 form{
+	overflow:hidden;
+	}
+.dis_innerpage_rightp1 form .tips p{
+	float:right;
+	color:#808080;
+	}
+.dis_innerpage_rightp1 form .tips p .maxNum{font:26px/30px Georgia, Tahoma, Arial;padding:0 5px;font-style:italic;}
+.dis_innerpage_rightp1 form .p1_div_left{
+	width:8%;
+	float:left;
+	text-align:center;
+	}	
+.dis_innerpage_rightp1 form .p1_div_right{
+	width:92%;
+	float:left;
+	}	
+.p1_div_right{
+	
+	width:6.28rem;
+	}
+.p1_div_right .main-textarea{
+	width:96.6%;
+	float:right;
+	border:1px solid #9ebdf2;
+	/*border:1px solid red;*/
+	position:relative;
+	}
+.p1_div_right textarea{
+	width:98%;
+	margin:0 auto;
+	float:right;
+	font-size:.16rem;
+	height:.81rem;
+	line-height:.18rem;
+	padding-left:.08rem;
+	border:0 solid;
+	outline:none;
+	}	
+.p1_div_right i{
+	display:inline-block;
+	width:.1rem;
+	height:.87rem;
+	background:url(../images/write_pointleft.jpg) no-repeat top;
+	position:absolute;
+	top:-.01rem;
+	left:-.08rem;
+	}	
+.p1_div_right div em{
+	overflow:hidden;
+	display:inline-block;
+	width:.19rem;
+	height:.19rem;
+	background-image: url(../images/write_tag.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	margin:.08rem .13rem 0 .12rem;
+	cursor:pointer;
+	}	
+.p1_div_right div.write_send em.tuxiang{background-position: -.46rem;}	
+.p1_div_right div.write_send em.shipin{background-position: -.91rem;}		
+.p1_div_right div.write_send em.huati{background-position: -1.38rem;}		
+.p1_div_right div.write_send input{
+	display:inline-block;
+	width:.8rem;
+	height:.24rem;
+	background:#0b88f2;
+	border:0 solid;
+	float:right;
+	border-radius:.12rem;
+	font-size:.14rem;
+	color:#fff;
+	margin-top:.2rem;
+	outline:none;
+	cursor:pointer;
+	}	
+/*part2*/
+.dis_innerpage_rightp2 .person_det h3 i{
+	display:inline-block;
+	width:.17rem;
+	height:.17rem;
+	background:url(../images/reader_tag.png) no-repeat right bottom;
+	vertical-align:baseline;
+	margin-left:.05rem;
+	}
+.person_info .width-down{
+	width: 18%;
+	}
+.width-down a{
+	 overflow:hidden;
+	 width:.79rem;
+	 height:.79rem;
+	 border-radius:.4rem;
+	 display:inline-block;
+	 }
+.person_det .group_write ul li{
+	margin: 0 .07rem .07rem 0;
+	}
+.group_write ul li{
+	display:inline-block;
+	width:1.48rem;
+	height:1.02rem;
+	overflow:hidden;
+	}
+.group_write h3, .group_write>div, .group_write p, .group_write ul {
+    padding: 0;
+}
+.group_write p {
+    margin-bottom: 0; 
+}
+.group_write ul{
+	margin-top:.05rem;
+	}
+.wb_right_p3main .person_info {
+    overflow: hidden;
+    margin-bottom: 0;
+}	
+.write-bottom span{
+	margin:0 .4rem 0 .4rem!important;
+	}
+.write-bottom span,.write-bottom span a{
+	font-size:.12rem;
+	color:#707070;
+	}
+.write-bottom span a:hover{
+	color:#0049f0;
+	}

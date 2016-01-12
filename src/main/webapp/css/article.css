@@ -1,0 +1,207 @@
+@charset "utf-8";
+@import url("common.css");
+body{
+	background:url(../images/user_bg.jpg) no-repeat center top;
+	}
+#banner{
+	width:100%;
+	min-width:8rem;
+	height:2.56rem;
+	border-top:.03rem solid #dcc599;
+	}
+#banner img{
+	width:100%;
+	height:100%;
+	}
+/*主体*/
+#write_article{
+	width:65%;
+	min-width:8rem;
+	margin:0 auto;
+	overflow:hidden;
+	padding:2% 2% 3%;
+	background:rgba(255,255,255,0.8);
+	}
+/*第一部分*/
+.art_top{
+	overflow:hidden;
+	}
+/*左*/
+.art_left{
+	width:30%;
+	float:left;
+	}
+.author{
+	text-align:center;
+	}	
+.author span{
+	display:block;
+	font-size:.18rem;
+	color:#606060;
+	margin-top:4%;
+	}
+/*右*/	
+.art_right{
+	padding-top:2%;
+	width:70%;
+	float:left;
+	}
+.art_right ul li{
+	color:#707070;
+	margin-bottom:1%;
+	font-size:.16rem;
+	vertical-align:middle;
+	}
+.art_right ul li i{
+	width:.16rem;
+	height:.16rem;
+	line-height:.16rem;
+	border-radius:.16rem;
+	display:inline-block;
+	background:#768089;
+	color:#fff;
+	text-align:center;
+	font-size:.14rem;
+	font-style:normal;
+	margin-right:.1rem;
+	}
+/*第二部分*/
+.my_words{
+	margin-top:3%;
+	}
+.my_words h3{
+	color:#0065c4;
+	font-size:.18rem;
+	padding:.05rem .48rem .05rem;
+	background:url(../images/account.png) no-repeat left top;
+	border-bottom:.02rem solid #f1f1f1;
+	font-weight:normal;
+	}
+.my_words form h4{
+	font-size:.16rem;
+	color:#1b1b1b;
+	font-weight:normal;
+	padding:2% 0 2%;
+	}
+.my_words form h4>span{
+	font-size:.14rem;
+	color:#808080;
+	padding-left:.1rem;
+	}
+.a1 select{
+	width:16%;
+	font-size:.14rem;
+	color:#747474;
+	height:.36rem;
+	margin-right:.1rem;
+	padding-left:1%;
+	border:1px solid #b8c4ce;
+	}
+.a1 select.a1_01{
+	width:20%;
+	}
+.p2_a2 .a2 input{
+	width:50%;
+	height:.36rem;
+	font-size:.16rem;
+	padding-left:1%;
+	border:1px solid #b8c4ce;
+	}
+.a3{
+	position:relative;
+	}
+.p2_a3 .a3 input[type="file"]{
+	width:47%;
+	height:.36rem;
+	filter:alpha(opacity:0);
+	opacity: 0;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	padding-left:4%;
+	cursor:pointer;
+	}
+.p2_a3 .a3 .txt{
+	font-size:.14rem;
+	color:#747474;
+	border:1px solid #b8c4ce;
+	background:url(../images/upload.jpg) no-repeat .2rem center;
+	width:47%;
+	height:.36rem;
+	padding-left:.5rem;
+	}
+.a4 textarea{
+	width:99%;
+	height:2rem;
+	font-size:.18rem;
+	border:1px solid #b8c4ce;
+	}	
+.art_btn input{
+	width:1.34rem;
+	background:#07a4e6;
+	height:.42rem;
+	border:0 solid;
+	color:#fff;
+	font-size:.18rem;
+	border-radius:.22rem;
+	margin-top:.28rem;
+	outline:none;
+	cursor:pointer;
+	}
+@media (min-width:1360px) and (max-width:1439px) {
+.art_right ul li{
+	font-size:.15rem;
+	}
+.author span{
+	font-size:.17rem;
+	}
+}
+@media (min-width:1280px) and (max-width:1359px) {
+.art_right ul li{
+	font-size:.14rem;
+	}
+.author span{
+	font-size:.16rem;
+	}
+}
+@media (min-width:1152px) and (max-width:1279px) {
+.art_right ul li{
+	font-size:.14rem;
+	}
+.author span{
+	font-size:.16rem;
+	}
+}
+@media (min-width:1024px) and (max-width:1151px) {
+.art_right ul li{
+	font-size:.14rem;
+	}
+.author span{
+	font-size:.16rem;
+	}
+}
+@media (min-width:980px) and (max-width:1023px) {
+.art_right ul li{
+	font-size:.14rem;
+	}
+.author span{
+	font-size:.16rem;
+	}
+}
+@media (min-width:801px) and (max-width:979px) {
+.art_right ul li{
+	font-size:.12rem;
+	}
+.author span{
+	font-size:.15rem;
+	}
+}
+@media (max-width:800px){
+.art_right ul li{
+	font-size:.12rem;
+	}
+.author span{
+	font-size:.14rem;
+	}
+}

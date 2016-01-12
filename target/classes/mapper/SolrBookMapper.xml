@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bhb.mall.mapper.SolrBookMapper" >
+  <resultMap id="BaseResultMap" type="SolrBook" >
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookName" />
+    <result column="typeId" jdbcType="INTEGER" property="typeId" />
+    <result column="isbn" jdbcType="VARCHAR" property="isbn" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="authorIntroduction" jdbcType="VARCHAR" property="authorIntroduction" />
+    <result column="bookOrder" jdbcType="INTEGER" property="bookOrder" />
+    <result column="amount" jdbcType="INTEGER" property="amount" />
+    <result column="wordCount" jdbcType="INTEGER" property="wordCount" />
+    <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+    <result column="scoreNum" jdbcType="INTEGER" property="scoreNum" />
+    <result column="scoreCount" jdbcType="INTEGER" property="scoreCount" />
+    <result column="cover" jdbcType="VARCHAR" property="cover" />
+    <result column="publisherId" jdbcType="INTEGER" property="publisherId" />
+    <result column="publisherName" jdbcType="VARCHAR" property="publisherName" />
+    <result column="publisherCode" jdbcType="VARCHAR" property="publisherCode" />
+    <result column="publishTime" jdbcType="TIMESTAMP" property="publishTime" />
+    <result column="groundingTime" jdbcType="TIMESTAMP" property="groundingTime" />
+    <result column="underCarriageTime" jdbcType="TIMESTAMP" property="underCarriageTime" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="lastUpdateTime" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+    <result column="bookStatus" jdbcType="VARCHAR" property="bookStatus" />
+    <result column="viewNum" jdbcType="INTEGER" property="viewNum" />
+    <result column="commentNum" jdbcType="INTEGER" property="commentNum" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="typeName" jdbcType="VARCHAR" property="typeName" />
+    <result column="typeCode" jdbcType="VARCHAR" property="typeCode" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, bookName, typeId, isbn, author, authorIntroduction, bookOrder, amount, wordCount, 
+    introduction, scoreNum, scoreCount, cover, publisherId, publisherName, publisherCode, publishTime, groundingTime, underCarriageTime, 
+    createTime, lastUpdateTime, bookStatus, viewNum, commentNum, source, typeName, typeCode
+  </sql>
+  <select id="selectAll" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from solr_book
+  </select>
+ 
+  
+</mapper>

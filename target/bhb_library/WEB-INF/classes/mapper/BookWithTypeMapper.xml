@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bhb.mall.mapper.BookWithTypeMapper" >
+  <resultMap id="BookWithTypeMap" type="BookWithType" >
+    <id column="bookId" property="bookId" jdbcType="INTEGER" />
+    <result column="bookName" property="bookName" jdbcType="VARCHAR" />
+    <result column="tid" property="tid" jdbcType="INTEGER" />
+    <result column="isbn" property="isbn" jdbcType="VARCHAR" />
+    <result column="author" property="author" jdbcType="VARCHAR" />
+    <result column="authorIntroduction" property="authorintroduction" jdbcType="VARCHAR" />
+    <result column="bookOrder" property="bookOrder" jdbcType="INTEGER" />
+    <result column="amount" property="amount" jdbcType="INTEGER" />
+    <result column="wordCount" property="wordcount" jdbcType="INTEGER" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="INTEGER" />
+    <result column="cover" property="cover" jdbcType="VARCHAR" />
+    <result column="publisher" property="publisher" jdbcType="INTEGER" />
+    <result column="publishTime" property="publishtime" jdbcType="TIMESTAMP" />
+    <result column="groundingTime" property="groundingtime" jdbcType="TIMESTAMP" />
+    <result column="underCarriageTime" property="undercarriagetime" jdbcType="TIMESTAMP" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="lastUpdateTime" property="lastupdatetime" jdbcType="TIMESTAMP" />
+    <result column="bookstatus" property="bookStatus" jdbcType="VARCHAR" />
+    <result column="viewNum" property="viewnum" jdbcType="INTEGER" />
+    <result column="commentNum" property="commentnum" jdbcType="INTEGER" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="typeName" property="typeName" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="selectBookWithType" resultMap="BookWithTypeMap">
+  	select 
+  	t_book.id as bookId,
+	t_book.bookName as bookName,
+	t_book.tid as typeId,
+	t_type.name as typeName,
+	t_book.isbn as isbn,
+	t_book.author as author,
+	t_book.authorIntroduction as authorIntroduction,
+	t_book.bookOrder as bookOrder,
+	t_book.amount as amount,
+	t_book.wordCount as wordCount,
+	t_book.introduction as introduction,
+	t_book.score as score,
+	t_book.cover as cover,
+	t_book.publisher as publisher,
+	t_book.publishTime as publishTime,
+	t_book.groundingTime as groundingTime,
+	t_book.underCarriageTime as underCarriageTime,
+	t_book.createTime as createTime,
+	t_book.lastUpdateTime as lastUpdateTime,
+	t_book.bookStatus as bookStatus,
+	t_book.viewNum as viewNum,
+	t_book.commentNum as commentNum,
+	t_book.source as source
+  	from t_book
+  	left outer join t_type on t_book.tid = t_type.id
+  </select>
+</mapper>

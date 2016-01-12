@@ -1,0 +1,44 @@
+10
+
+dir
+13
+svn://192.168.1.101/com/bhb/java/bhb_library/src/main/resources
+svn://192.168.1.101
+
+
+
+2015-11-27T03:09:42.745683Z
+13
+lwb
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+cf6fce46-0297-47d8-9892-fae43c17ecac
+
+
+
+
+
+
+0
+
+config
+dir
+
+mapper
+dir
+
+properties
+dir
+
